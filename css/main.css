@@ -1,0 +1,163 @@
+/* reset css */
+*{
+	margin: 	0; 
+	padding:	0; 
+	border: 	0; 
+}
+
+.wrap {
+	width: 90%;
+	margin: 0 auto;
+	height: 960px;
+	background-color: #e5edf9;
+	margin-bottom: 50px;
+	/*border: 1px solid black;*/
+}
+
+header img{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+aside{
+	float: left; 
+	width: 30%;
+	margin: 1%;
+	padding: 1%;
+	/*border: 1px solid black;*/
+    
+}
+
+figure{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-left: 25%;
+	/*border: 1px solid black;*/
+}
+ 
+figcaption {
+	width: 100%;
+	margin: 1%;
+	/*border: 1px solid black;*/
+}
+
+.selector{
+	width:60%;
+	height: auto;
+	float: left;
+	margin: 1%;
+	padding: 1%;
+	/*border: 1px solid black;*/
+}
+
+.container{
+	width: 60%;
+	height: auto;
+	float: left;
+	margin: 2%;
+	margin-top: 30px;
+	/*border: 1px solid black;*/
+}
+
+
+.movie{
+	width: 30%;
+	height: auto;
+	margin: 1%;
+	float: left;
+	padding: 1%;
+	/*border: 1px solid black;*/
+}
+
+video {
+	width: 100%;
+	padding: 1%;
+}
+
+.description{
+	width: 25.5%;
+	height: auto;
+	margin: 1%;
+	float: left;
+	padding: 1%;
+	/*border: 1px solid black;*/
+}
+
+.comment{
+	width: 25.5%;
+	height: auto;
+	float: left;
+	margin: 1%;
+	padding: 1%;
+	/*border: 1px solid black;*/
+}
+
+.footer {
+	left: 0px; 
+	bottom:0px;
+	width: 100%;
+	float: right;
+	height: 90px;
+	background-color: #a2a8b2;
+	/*border: 1px solid black;*/
+	/*position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height:60px;
+	margin-left: 5%;
+	width:90%;
+	background:#999;*/
+	
+}
+/* Alex CSS ____________________________________________________________________________________________________________ */
+
+#buttonHolder { 
+	padding-top:10px;
+	position:relative;
+	text-align:center;
+}
+
+#theTarget {
+	position:absolute;
+	z-index:1;
+	top: -10px;
+	left:5px;
+}
+
+#genreTitle {
+	position:absolute;
+	top: 10px;
+	left: 90px;
+	font-size: .85em;
+}
+
+.trackHolder {
+	position: relative;
+	background-color: #757575;
+    width: 401px;
+	height:300px;
+    left: 44px;
+    border: thin solid #333;
+    overflow: hidden;
+    top: -29px;
+    padding-top: 19px;
+    z-index: 0;
+    list-style-type: none;
+}
+
+.trackHolder li { 
+	padding: 8px 0 10px;
+    width: 90%;
+	height: 80px;
+    border-bottom: thin solid #ccc;
+}
+
+.trackHolder li p {
+	height: 200px;	
+}
+
+.trackHolder li:last-of-type {
+	border-bottom: none;
+}
