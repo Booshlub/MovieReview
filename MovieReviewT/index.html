@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Movie Review Site</title>
+<link href="css/foundation.css" rel="stylesheet" type="text/css" media="screen"> 
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen"> 
+<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+<link href="css/audioPlayerStyles.css" rel="stylesheet"  type="text/css">
+<script src="script/TweenMax.min.js"></script>
+<script src="script/modernizr_custom.js"></script>
+</head>
+<body>
+<section class = "wrap">
+
+<header><img src="./img/film_production_header.jpg">
+</header>
+
+<aside>
+<ul class="trackHolder"></ul>
+</aside>
+
+<section class = "selector">
+<H2>Genre Selector</h2>
+<div id="buttonHolder">
+		<img src="images/button1.png" id="Action"  draggable="true" alt="soundtrack button">
+		<img src="images/button2.png" id="Horror" draggable="true" alt="alternative button">
+		<img src="images/button3.png" id="Sci-Fi" draggable="true" alt="oldies button">
+		<p>Drag to the target button</p>
+	</div>
+
+	<div class="tracks" id="tracks">
+		<img src="images/targetImg.png" id="theTarget" alt="drag here">
+		<img src="images/newBarBG.jpg" id="playerBar" alt="playerBar">
+	    <p id="genreTitle">&laquo; Drag here!</p>
+	</div>
+
+</section>
+
+<section class="myAudioPlayer">
+<video controls id="video">
+  <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
+  <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" type="video/ogg">
+  <p>Your browser does not support HTML5 video.</p>
+</video>
+</section>
+
+<section>
+<h2>Description</h2>
+<br>
+<p class="description"></p>
+</section>
+
+<section class = "comment">
+<h2>Comment</h2>
+<p>Comment Section -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</section>
+
+
+<section class="footer">
+
+</section>
+
+</section>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="script/mediaPlayer.js"></script>
+</body>
+</html>
