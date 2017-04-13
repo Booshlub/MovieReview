@@ -89,7 +89,7 @@
 			console.log("clicked list, this: " + this);
 			var description = this.dataset.description;
 			
-			var descrP = document.querySelector("#descrP");
+			var descrP = document.querySelector(".description p");
 			descrP.innerHTML = description;
 		});
 		
