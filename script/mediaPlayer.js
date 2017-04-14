@@ -45,6 +45,7 @@
 			if (data && data !=="null") {
 				data = JSON.parse(data);
 				buildMovies(data);
+				//commentLoad(data);
 			} else {
 				console.log('didn\'t work, show error or try again message');
 			}
@@ -60,23 +61,44 @@
 	// ajax call should build this
 	function buildMovies(movielist) {
 		var currentElement;
-
 		genreTitle.innerHTML = movielist[0].genre;
-		console.log("in build, movie list " + movielist[0].description);
-		
 		var loadedMovies = document.querySelector(".trackHolder");
-		
 		loadedMovies.innerHTML = '';
-		
 		[].forEach.call(movielist, function(movie, index) {
-			console.log("In for each " + movie.description);
+			
 			var newMovie = document.createElement('li'),
 			movieLabel = document.createElement('p');
+			newMovie.dataset.name = movie.description;
 			
-			movieLabel.classList.add('trackNameStyle');
-			newMovie.dataset.name = movie.name;
-			movieLabel.innerHTML = movie.name + ": " + movie.description;
-			console.log("Description!");
+			movieLabel.innerHTML = movie.name;
+			
+			// add the pieces to the containing list element
+			newMovie.appendChild(movieLabel);
+			loadedMovies.appendChild(newMovie);
+		});
+		
+		// add event handling to new track elements
+		$('.trackHolder li').on('click', function() {
+			var description = this.dataset.name;
+			var descrP = document.querySelector(".synopsis");
+			descrP.innerHTML = description;
+		});
+		$('.trackHolder li').first().trigger('click');
+		commentLoad(movielist);
+	}
+	
+	function commentLoad(movielist) {
+		var currentElement;
+		genreTitle.innerHTML = movielist[0].genre;
+		var loadedMovies = document.querySelector(".trackHolder");
+		loadedMovies.innerHTML = '';
+		[].forEach.call(movielist, function(movie, index) {
+			
+			var newMovie = document.createElement('li'),
+			movieLabel = document.createElement('p');
+			newMovie.dataset.name = movie.comments;
+			
+			movieLabel.innerHTML = movie.name;
 			
 			// add the pieces to the containing list element
 			newMovie.appendChild(movieLabel);
@@ -86,23 +108,18 @@
 		// add event handling to new track elements
 		$('.trackHolder li').on('click', function() {
 			
-			console.log("clicked list, this: " + this);
-			var description = this.dataset.description;
-			
-			var descrP = document.querySelector("#descrP");
-			descrP.innerHTML = description;
+			var comment = this.dataset.name;
+			var commentP = document.querySelector(".comment");
+			commentP.innerHTML = comment;
 		});
-		
 		$('.trackHolder li').first().trigger('click');
+		//buildMovies(movielist);
 	}
-	
-	
-	
 
 	theTarget.addEventListener('drop', drop, false);
 	theTarget.addEventListener('dragover', allowDrop, false);
 	
 	[].forEach.call(genreButtons, function(button) {
-		button.addEventListener('dragstart', drag, false);
+	button.addEventListener('dragstart', drag, false);
 	});
 })();
