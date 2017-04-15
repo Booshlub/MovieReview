@@ -72,9 +72,6 @@ h1 {
     border-bottom: thin solid #ccc;
 }
 
-.trackHolder li p {
-	height: 200px;	
-}
 
 .trackHolder li:last-of-type {
 	border-bottom: none;
@@ -207,7 +204,7 @@ progress {
 	left:8px; 
 	/*float:left;*/
 	display:inline-block; 
-	width:20px; 
+	width:20px;
 	height:17px; 
 	background-image:url(../images/shuffleIcon.png); 
 	background-repeat:no-repeat; 

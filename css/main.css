@@ -154,9 +154,9 @@ video {
     border-bottom: thin solid #ccc;
 }
 
-.trackHolder li p {
+/*.trackHolder li p {
 	height: 200px;	
-}
+}*/
 
 .trackHolder li:last-of-type {
 	border-bottom: none;

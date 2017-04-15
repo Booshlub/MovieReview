@@ -12,9 +12,16 @@
 	$mysqli->set_charset("utf8");
 
 	// set some post stuff up here
-	$genreType = $_GET["genre"];	
+	$genreType = $_GET["genre"];
+	$movieNumber = $_GET["movie"];
 
-	$myQuery = "SELECT * FROM movies WHERE genre = '$genreType'";
+	if ($genreType) {
+		$myQuery = "SELECT * FROM movies WHERE genre = '$genreType'";
+	} else if ($movieNumber) {
+		$myQuery = "SELECT * FROM comments WHERE movie_id = '$movieNumber'";
+	}	
+
+	
 	$result = mysqli_query($mysqli, $myQuery);
 
 	while ($r = mysqli_fetch_assoc($result)) {
