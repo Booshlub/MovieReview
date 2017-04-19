@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Review Site</title>
+	<link href="css/foundation.css" rel="stylesheet" type="text/css" media="screen"> 
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="screen"> 
+	<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+	<link href="css/audioPlayerStyles.css" rel="stylesheet"  type="text/css">
+	<script src="script/TweenMax.min.js"></script>
+	<script src="script/modernizr_custom.js"></script>
+</head>
+<body>
+<main class="wrap">
+	<header>
+		<img src="./img/film_production_header.jpg">
+	</header>
+
+	<section class = "selector">
+		<h2>Genre Selector</h2>
+		<div id="buttonHolder">
+			<img src="images/button1.png" id="Action"  draggable="true" alt="soundtrack button">
+			<img src="images/button2.png" id="Horror" draggable="true" alt="alternative button">
+			<img src="images/button3.png" id="Sci-Fi" draggable="true" alt="oldies button">
+			<p>Drag to the target button</p>
+		</div>
+
+		<div class="tracks" id="tracks">
+			<img src="images/targetImg.png" id="theTarget" alt="drag here">
+			<img src="images/newBarBG.jpg" id="playerBar" alt="playerBar">
+		    <p id="genreTitle">&laquo; Drag here!</p>
+		</div>
+
+		<aside>
+			<!-- loaded movie info here -->
+			<ul class="trackHolder">
+				<!-- load each movie's info here, with button to get comments -->
+			</ul>
+		</aside>
+	</section>
+
+	<section class = "movie">
+		<video controls id="video">
+		  <source src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" type="video/mp4">
+		  Your browser does not support HTML5 video.
+		</video>
+</iframe>
+	</section>
+
+	<section class = "description">
+		<h2>Description</h2>
+        <p id="movId" >Test</p>
+		<p class="synopsis">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+		</p>
+	</section>
+
+	<section class="comment">
+		<h2>Comment</h2>
+		<p>
+			Comment Section -- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+		</p>
+	</section>
+    <section>
+    	<h2>Input Comments Here</h2>
+        <textarea id="commentInput" cols="40" rows="2"></textarea>
+        <button id="submit">Submit</button>
+    </section>
+</main>
+
+<section class="footer"></section>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="script/mediaPlayer.js"></script>
+</body>
+</html>
